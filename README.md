@@ -4,7 +4,7 @@ This was a project to build a functional (hypothetically Turing-complete) 8-bit 
 
 ## Simulator Used
 
-This project was built using the **Logic.ly** online demo. You can try it out here:
+This project was built using the **Logic.ly** online demo. The only way to import the Locicly file is to have the desktop version. You can try it out here.:
 
 [![Simulator: Logic.ly](https://img.shields.io/badge/Simulator-Logic.ly-blue)](https://logic.ly/demo/)
 
