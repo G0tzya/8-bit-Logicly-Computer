@@ -4,7 +4,7 @@ This was a project to build a functional (hypothetically Turing-complete) 8-bit 
 
 ## Simulator Used
 
-This project was built using the **Logic.ly** online demo. The only way to import the Logicly file is to have the desktop version. You can try it out here.:
+This project was built using the **Logic.ly** online demo. You can try it out here:
 
 [![Simulator: Logic.ly](https://img.shields.io/badge/Simulator-Logic.ly-blue)](https://logic.ly/demo/)
 
@@ -12,7 +12,7 @@ This project was built using the **Logic.ly** online demo. The only way to impor
 
 I've taken this project as far as I can. The simulation software I was using **cannot save the state of the memory chips**.
 
-This is a critical blocker. It means I can't store the binary translations for my bytecode. Without a way to store the program, building a functional CPU to fetch and execute instructions is impossible, as the program would be erased every time I reopen the file. Furthermore, the lack of state saving made making a completely functional instruction ROM impossible.
+This is a critical blocker. It means I couldn't create a permanent **Instruction ROM** to store the binary translations (bytecode) for my instruction set. Without a stored program, building a functional CPU to fetch and execute instructions is impossible, as the program would be erased every time I reopen the file.
 
 ### Implemented Components
 
@@ -22,12 +22,15 @@ This is a critical blocker. It means I can't store the binary translations for m
 * **RAM:** 16x8 bytes (16 bytes total).
 * **Display:** 8-bit digital display.
 * **Register Flags:** 0 Check Sum
+* **4-Bit Program Counter:** Can sequentially select memory addresses. Its value can also be changed, which *would have* allowed for loops and jumps if a CPU were present.
 
-### Unrealized Features
+### Missing CPU / Control Unit Components
 
-I also built the logic for a control unit, but these parts are useless without a CPU to manage them:
+Because of the save-state limitation, I could not build the final pieces of the Control Unit:
 
-* **4-Bit Program Counter:** Can sequentially select memory addresses. Its value can also be changed, which would have allowed for loops and jumps.
+* **Instruction ROM:** To store the "syntax table" or a persistent list of bytecode instructions.
+* **Instruction Decoder:** The logic required to translate an instruction's bytecode (e.g., `0001`) into the correct control signals (e.g., "Enable Register A," "Enable ALU," "Write to Register B").
+* **Full CPU:** The final integration of all these parts to create a working fetch-decode-execute cycle.
 
 ## Repository Purpose
 
