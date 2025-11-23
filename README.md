@@ -1,6 +1,6 @@
 # My 8-Bit Computer Project
 
-This was a project to build a functional 8-bit computer from scratch in a simulator. It was an amazing learning experience where I learned a ton about system architectures, bus systems, EPROMs, and how CPUs work (they aren't magic, but the transistor density is crazy). Also helped me gain an intuitive understanding of barebones systems logic, which made learning systems languages like C++ and Rust surprisingly simple. 
+This was a project to build a functional (hypothetically Turing-complete) 8-bit computer from scratch in a simulator. It was an amazing learning experience where I learned a ton about system architectures, bus systems, EPROMs, and how CPUs work (they aren't magic, but the transistor density is crazy). Also helped me gain an intuitive understanding of barebones systems logic, which made learning systems languages like C++ and Rust surprisingly simple. 
 
 ## Project Status: Halted
 
@@ -15,13 +15,13 @@ This is a critical blocker. It means I can't store the binary translations for m
 * **Registers:** 2 value registers connected to the ALU.
 * **RAM:** 16x8 bytes (16 bytes total).
 * **Display:** 8-bit digital display.
+* **Register Flags:** 0 Check Sum
 
 ### Unrealized Features
 
 I also built the logic for a control unit, but these parts are useless without a CPU to manage them:
 
 * **4-Bit Program Counter:** Can sequentially select memory addresses. Its value can also be changed, which would have allowed for loops and jumps.
-* **Sum 0 Check:** A flag that, combined with the PC and a "CPU," would have been enough to make the computer Turing complete.
 
 ## Repository Purpose
 
