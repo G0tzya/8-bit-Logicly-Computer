@@ -2,6 +2,12 @@
 
 This was a project to build a functional (hypothetically Turing-complete) 8-bit computer from scratch in a simulator. It was an amazing learning experience where I learned a ton about system architectures, bus systems, EPROMs, and how CPUs work (they aren't magic, but the transistor density is crazy). Also helped me gain an intuitive understanding of barebones systems logic, which made learning systems languages like C++ and Rust surprisingly simple. 
 
+## Simulator Used
+
+This project was built using the **Logic.ly** online demo. You can try it out here:
+
+[![Simulator: Logic.ly](https://img.shields.io/badge/Simulator-Logic.ly-blue)](https://logic.ly/demo/)
+
 ## Project Status: Halted
 
 I've taken this project as far as I can. The simulation software I was using **cannot save the state of the memory chips**.
